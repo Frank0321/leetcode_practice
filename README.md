@@ -9,13 +9,13 @@
 │ ├─ Easy or Medium or Hard
 │ │ ├─ Numberfile_name
 │ │ │ ├─ README.md
-│ │ │ ├─ name_題號_code_date.xxx
+│ │ │ ├─ name_題號_date.xxx
 ```
 1. 依照難度做區分 (difficulty)
 2. 依照題號與名稱進行區分
    - 7_ReverseInteger
 4. 在題號內建立 README.md，撰寫提示內容
 5. 新增已經撰寫好的答案並按照以下原則進行命名
-   - 名字_題號_所使用的程式_完成日期.程式附檔名
-   - 範例 : Frank_7_python_210530.py
+   - 名字_題號_完成日期.程式附檔名
+   - 範例 : Frank_7_210530.py
    
