@@ -2,12 +2,6 @@ package com.example.leetcode_practice.Easy.MoveZeroes_283;
 
 import java.util.Arrays;
 
-/**
- * FileName : Frank_210214
- * CreatTime : 2021/10/15
- * Author : Frank
- * Description :
- */
 public class Frank_210214 {
     public static void main(String[] args) {
         int[] nums = new int[]{0,1,0,3,12};
@@ -25,5 +19,6 @@ public class Frank_210214 {
             }
         }
     }
+
 
 }
