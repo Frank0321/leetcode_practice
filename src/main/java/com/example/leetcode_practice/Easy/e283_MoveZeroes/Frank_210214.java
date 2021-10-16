@@ -1,4 +1,4 @@
-package com.example.leetcode_practice.Easy.MoveZeroes_283;
+package com.example.leetcode_practice.Easy.e283_MoveZeroes;
 
 import java.util.Arrays;
 

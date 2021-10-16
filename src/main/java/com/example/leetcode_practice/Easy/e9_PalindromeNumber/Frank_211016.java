@@ -1,4 +1,4 @@
-package com.example.leetcode_practice.Easy.PalindromeNumber_9;
+package com.example.leetcode_practice.Easy.e9_PalindromeNumber;
 
 import java.util.ArrayList;
 import java.util.List;
