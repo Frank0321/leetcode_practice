@@ -20,6 +20,9 @@ public class LongestCommonPrefix {
             }
         }).findFirst().orElse("");
 
+        //取出最短的文字
+        var first = Arrays.stream(strs).sorted(Comparator.comparing(s -> s.length()))
+            .findFirst().orElse("");
 
         for (int i = 0; i <= firstStr.length(); i++) {
             String check = firstStr.substring(0,i);
