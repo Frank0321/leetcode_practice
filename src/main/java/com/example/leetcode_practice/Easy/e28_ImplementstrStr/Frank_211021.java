@@ -6,6 +6,9 @@ public class Frank_211021 {
     System.out.println(strStr("aaaaa", "bba"));
   }
 
+  /**
+   * 如果目標文字不是空白，就回傳目標文字在字串中的位置
+   */
   public static int strStr(String haystack, String needle){
     if (needle.length() == 0){
       return 0;
