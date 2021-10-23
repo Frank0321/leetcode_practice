@@ -9,6 +9,10 @@ public class Frank_210214 {
         Arrays.stream(nums).forEach(n -> System.out.println(n));
     }
 
+    /**
+     * 總共跑 整個 nums 的迴圈，每一層每次少跑一個次數 (因為最後一個已經變成 0 了)
+     * 如果是 0，就把後面的數字往前移
+     */
     public static void moveZeros(int[] nums){
         for (int i = 0; i < nums.length-1; i ++){
             for (int j = 0; j < nums.length-1-i; j++){
