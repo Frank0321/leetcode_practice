@@ -17,4 +17,8 @@ public class Frank_211021 {
     }
 
   }
+
+  public static void test(){
+
+  }
 }
