@@ -14,12 +14,27 @@ public class Frank_210214 {
      * 如果是 0，就把後面的數字往前移
      */
     public static void moveZeros(int[] nums){
-        for (int i = 0; i < nums.length-1; i ++){
-            for (int j = 0; j < nums.length-1-i; j++){
-                if (nums[j] == 0){
-                    nums[j] = nums[j+1];
-                    nums[j+1] = 0;
-                }
+//        for (int i = 0; i < nums.length-1; i ++){
+//            for (int j = 0; j < nums.length-1-i; j++){
+//                if (nums[j] == 0){
+//                    nums[j] = nums[j+1];
+//                    nums[j+1] = 0;
+//                }
+//            }
+//        }
+
+        //method 2
+        /**
+         * i 表示不為 0 的位置，因此如果nums[j]，不為零，則依照 i 的順序填值
+         */
+        int i = 0;
+        for(int j = 0; j < nums.length; j++)
+        {
+            if(nums[j] != 0)
+            {
+                nums[i] = nums[j];
+                nums[j] = 0;
+                i++;
             }
         }
     }
