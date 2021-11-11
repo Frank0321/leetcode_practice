@@ -12,9 +12,38 @@ import java.util.stream.IntStream;
  */
 public class Frank_1109 {
     public static void main(String[] args) {
-        int [] nums = {1,3,5,6};
-        int target = 2;
-        System.out.println(searchInsert(nums, target));
+        int [] nums = {1};
+        int target = 0;
+//        System.out.println(searchInsert(nums, target));
+        System.out.println(searchInsert1(nums, target));
+    }
+
+    private static int searchInsert1(int[] nums, int target) {
+        if (nums.length == 1){
+            return target <= nums[0] ? 0 : 1;
+        }
+        //二分搜尋法
+        int start = 0, end = nums.length, middle = 0;
+        boolean isCountine = true;
+        while (isCountine){
+            middle = (start + end) / 2;
+            if (target == nums[middle]){
+                isCountine = false;
+            }else if (target > nums[middle]){
+                start = middle;
+                if (end - start == 1){
+                    middle = target == nums[end-1]? end-1: end;
+                    isCountine = false;
+                }
+            }else if (target < nums[middle]){
+                end = middle;
+                if (end - start == 1){
+                    middle = target < nums[start]? start : start+1;
+                    isCountine = false;
+                }
+            }
+        }
+        return middle;
     }
 
     /**
@@ -29,4 +58,5 @@ public class Frank_1109 {
                 .filter(n -> nums[n]>=target)
                 .findFirst().orElse(nums.length);
     }
+
 }
