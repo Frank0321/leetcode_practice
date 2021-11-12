@@ -1,4 +1,4 @@
-package com.example.leetcode_practice.other;
+package com.example.leetcode_practice.other.position;
 
 import java.util.Arrays;
 
