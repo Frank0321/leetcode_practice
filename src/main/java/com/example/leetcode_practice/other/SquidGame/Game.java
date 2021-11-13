@@ -1,6 +1,7 @@
 package com.example.leetcode_practice.other.SquidGame;
 
 import java.util.Arrays;
+import java.util.Map;
 
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
@@ -14,7 +15,9 @@ import static java.util.stream.Collectors.groupingBy;
 public class Game {
     public static void main(String[] args) {
         String text = "○□△○□□△□△△○□○○";
-        System.out.println(Arrays.stream(text.split(""))
-                .collect(groupingBy(String::toString, counting())));
+        //將 array 以 名稱和數量 組成一個 map
+        Map<String, Long> map = Arrays.stream(text.split(""))
+                .collect(groupingBy(String::toString, counting()));
+        System.out.println(map);
     }
 }
