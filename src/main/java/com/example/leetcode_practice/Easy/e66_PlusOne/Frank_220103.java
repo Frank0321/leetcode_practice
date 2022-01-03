@@ -1,12 +1,5 @@
 package com.example.leetcode_practice.Easy.e66_PlusOne;
 
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * FileName : Frank_220103
  * CreatTime : 2022/1/3
@@ -26,13 +19,14 @@ public class Frank_220103 {
      * 3. 都執行完，還沒有回傳，表示需要進位
      */
     private static int[] plusOne2(int[] digits) {
-        int carry = 1;
+        int add = 1;
         for (int i = digits.length-1; i>= 0; i--) {
-            digits[i] += carry;
-            if (digits[i] < 10) // early return
+            digits[i] += add;
+            if (digits[i] < 10)
                 return digits;
             digits[i] = 0;
         }
+        //如果最後一個數字大於 10，才會執行到這邊
         int[] ret = new int[digits.length+1];
         ret[0] = 1;
         return ret;
