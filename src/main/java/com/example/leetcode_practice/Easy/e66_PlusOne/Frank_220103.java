@@ -15,8 +15,27 @@ import java.util.stream.Collectors;
  */
 public class Frank_220103 {
     public static void main(String[] args) {
-        int [] digits = new int [] {1,2,3};
+        int [] digits = new int [] {9,9,9};
         System.out.println(plusOne(digits));
+        System.out.println(plusOne2(digits));
+    }
+
+    /**
+     * 1. 如果位數沒有大於10，就直接回傳出去
+     * 2. 不然就是歸零，在執行一次(進位)
+     * 3. 都執行完，還沒有回傳，表示需要進位
+     */
+    private static int[] plusOne2(int[] digits) {
+        int carry = 1;
+        for (int i = digits.length-1; i>= 0; i--) {
+            digits[i] += carry;
+            if (digits[i] < 10) // early return
+                return digits;
+            digits[i] = 0;
+        }
+        int[] ret = new int[digits.length+1];
+        ret[0] = 1;
+        return ret;
     }
 
     /**
