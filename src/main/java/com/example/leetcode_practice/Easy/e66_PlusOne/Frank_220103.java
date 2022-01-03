@@ -1,0 +1,53 @@
+package com.example.leetcode_practice.Easy.e66_PlusOne;
+
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+/**
+ * FileName : Frank_220103
+ * CreatTime : 2022/1/3
+ * Author : Frank.Chang
+ * Description :
+ */
+public class Frank_220103 {
+    public static void main(String[] args) {
+        int [] digits = new int [] {1,2,3};
+        System.out.println(plusOne(digits));
+    }
+
+    /**
+     * 1. 先在最後一個數字 + 1
+     * 2. 如果數字 > 9，則進位
+     * 3. 如果陣列第一個數字也需要進位，則產生一個新的陣列去存放
+     */
+    private static int[] plusOne(int[] digits) {
+        digits[digits.length-1] += 1;
+        int next = 0;
+        for (int i = digits.length-1; i >=0 ; i--) {
+            if (digits[i] > 9){
+                digits[i] = 0;
+                if (i != 0){
+                    digits[i-1] += 1;
+                }else {
+                    next++;
+                }
+            }
+        }
+        if (next == 0){
+            return digits;
+        }else {
+            int[] result = new int [digits.length+1];
+            result[0] = 1;
+            for (int i = 0; i < digits.length; i++) {
+                result[i+1] = digits[i];
+            }
+            return result;
+        }
+
+    }
+
+}
