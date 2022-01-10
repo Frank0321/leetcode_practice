@@ -1,4 +1,4 @@
-package com.example.leetcode_practice.Interview.univ.factoryPattern;
+package com.example.leetcode_practice.Interview.factoryPattern;
 
 /**
  * FileName : Student
