@@ -13,6 +13,7 @@ public class ExtendsTest {
          */
         Parent child = new Son();
         System.out.println(child.staticWord);
+        System.out.println(child.staticFinalWord);
         System.out.println(child.finalWord);
         child.staticMethod();
         child.method();
@@ -21,6 +22,7 @@ public class ExtendsTest {
 
         Son son = new Son();
         System.out.println(son.staticWord);
+        System.out.println(son.staticFinalWord);
         System.out.println(son.finalWord);
         son.staticMethod();
         son.method();

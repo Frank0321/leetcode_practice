@@ -8,7 +8,8 @@ package com.example.leetcode_practice.Interview.ExtendsExp;
  */
 public class Son extends Parent{
     static String staticWord = "Son_static";
-    static final String finalWord = "Son_final";
+    static final String staticFinalWord = "Son_Static_final";
+    final String finalWord = "Son_final";
     public static void staticMethod(){
         System.out.println("Son staticMethod run");
     }
