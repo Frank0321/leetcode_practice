@@ -10,9 +10,11 @@ public class Frank_220111 {
     public static void main(String[] args) {
 //        ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
 //        ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
-        ListNode l1 = new ListNode(9, new ListNode(9, new ListNode(9)));
-        // 會有 NPE 要處理
-        ListNode l2 = new ListNode(9, new ListNode(9));
+//        ListNode l1 = new ListNode(9, new ListNode(9, new ListNode(9)));
+//        // 會有 NPE 要處理
+//        ListNode l2 = new ListNode(9, new ListNode(9));
+        ListNode l1 = new ListNode(0);
+        ListNode l2 = new ListNode(0);
         ListNode result = addTwoNumber(l1, l2);
         System.out.println("=============");
         System.out.println(printListNode(result));
@@ -30,12 +32,12 @@ public class Frank_220111 {
     private static ListNode addTwoNumber(ListNode l1, ListNode l2) {
         int teen = 0;
         StringBuilder sb = new StringBuilder();
-        while (l1 != null || l2!= null || teen !=0){
+        while (l1.val != 0 || l2.val != 0 || l1.next != null || l2.next != null || teen !=0){
             int x = l1 == null ? 0 : l1.val;
             int y = l2 == null ? 0 : l2.val;
             sb.append((x + y + teen) % 10);
-            l1 = l1.next == null ? null : l1.next;
-            l2 = l2.next == null ? null : l2.next;
+            l1 = l1.next == null ? new ListNode() : l1.next;
+            l2 = l2.next == null ? new ListNode() : l2.next;
             teen = (x + y + teen) / 10;
         }
         System.out.print("sb is : ");
@@ -45,6 +47,9 @@ public class Frank_220111 {
     }
 
     private static ListNode stringToListNode(StringBuilder sb) {
+        if (sb.length() == 0){
+            return new ListNode();
+        }
         sb.reverse();
         ListNode result = new ListNode();
         result.val = Integer.parseInt(sb.substring(0, 1));
