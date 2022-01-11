@@ -5,16 +5,23 @@ package com.example.leetcode_practice.Easy.e2_AddTwoNumbers;
  * CreatTime : 2022/1/11
  * Author : Frank.Chang
  * Description : ListNode 介紹參考 : https://daniel820710.medium.com/leetcode-link-list-%E4%BB%8B%E7%B4%B9-6d6dfe14a53b
+ *
+ * ListNode 為節點的概念
+ * val 為第一個數字
+ * next 為下一個節點
+ * 也就是說 [2,4,3] => new ListNode(2, new ListNode(4, new ListNode(3,)));
  */
 public class Frank_220111 {
     public static void main(String[] args) {
-//        ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
-//        ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+        // case 1
+        ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+        ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+        // case 2
 //        ListNode l1 = new ListNode(9, new ListNode(9, new ListNode(9)));
-//        // 會有 NPE 要處理
 //        ListNode l2 = new ListNode(9, new ListNode(9));
-        ListNode l1 = new ListNode(0);
-        ListNode l2 = new ListNode(0);
+        // case 3
+//        ListNode l1 = new ListNode(0);
+//        ListNode l2 = new ListNode(0);
         ListNode result = addTwoNumber(l1, l2);
         System.out.println("=============");
         System.out.println(printListNode(result));
@@ -58,6 +65,5 @@ public class Frank_220111 {
         }
         return result;
     }
-
 
 }
