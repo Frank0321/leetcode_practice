@@ -11,6 +11,9 @@ public class StringTest {
         String A = "test";
         String B = "test";
         String C = new String("test");
+        String D = new String("test");
+        String E = A;
+
 
         System.out.println(A == B);
         System.out.println(A == C);       //f
@@ -27,12 +30,19 @@ public class StringTest {
         System.out.println(A.equals("test"));
         System.out.println(B.equals("test"));
         System.out.println(C.equals("test"));
+        System.out.println("==========");
+        System.out.println(A == E);
+        System.out.println(A.equals(E));
+        System.out.println(C == D);
+        System.out.println(C.equals(D));
 
-        String D = null;
-        String E = "null";
 
+        String F = null;
+        String G = "null";
+
+        System.out.println("======other=====");
         try {
-            System.out.println(D.equals(E));
+            System.out.println(F.equals(G));
         }catch (NullPointerException e){
             System.out.println("Exception");
         }finally {
