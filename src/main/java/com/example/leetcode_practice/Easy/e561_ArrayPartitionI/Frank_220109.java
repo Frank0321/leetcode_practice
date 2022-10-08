@@ -21,7 +21,7 @@ public class Frank_220109 {
      * @return
      */
     private static int arrayPairSum(int[] nums) {
-        var arr = Arrays.stream(nums).sorted().toArray();
+        int[] arr = Arrays.stream(nums).sorted().toArray();
         int result = 0;
         for (int i = 0; i < arr.length; i= i+2) {
             result += arr[i];

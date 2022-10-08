@@ -13,7 +13,7 @@ public class LongestCommonPrefix {
 
     public static String LongestCommon (String[] strs){
         //取出最短的文字
-        var firstStr = Arrays.stream(strs).sorted(new Comparator<String>() {
+        String firstStr = Arrays.stream(strs).sorted(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 return o1.length() - o2.length();
@@ -21,7 +21,7 @@ public class LongestCommonPrefix {
         }).findFirst().orElse("");
 
         //取出最短的文字
-        var first = Arrays.stream(strs).sorted(Comparator.comparing(s -> s.length()))
+        String first = Arrays.stream(strs).sorted(Comparator.comparing(s -> s.length()))
             .findFirst().orElse("");
 
         for (int i = 0; i <= firstStr.length(); i++) {
