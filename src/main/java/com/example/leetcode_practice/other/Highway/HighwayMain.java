@@ -2,10 +2,16 @@ package com.example.leetcode_practice.other.Highway;
 
 import java.util.Arrays;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class HighwayMain {
 
+	/**
+	 * 題目 : 高速公路
+	 * 1. 只有一線道
+	 * 2. 每次前進該車的速度 (速度2 => 前進2格)
+	 * 3. 前進時，不可以超過前面車輛
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		Car car1 = new Car("Toyota", "altis", 1);
@@ -70,13 +76,18 @@ public class HighwayMain {
 			}
 			
 			// 不是 null，則往前移動
+			
+			// 該車的速度
 			int speed = highway[position].getSpeed();
 			
+			// 該車新的位置，預設為當前位置
 			int newPosition = position;
 			
+			// 從當前的位置往前算車速
+			// 如果車速的位置，在新座標上沒有車子，則先佔用
+			//                在新座標上  有車子，強制結束
 			for (int i = 0; i <= speed; i ++) {
 				int tempPosition = position + i;
-				
 				if((tempPosition < highwayLength) && (newHighway[tempPosition] == null)) {
 					newPosition = tempPosition;
 				} else {
