@@ -1,5 +1,5 @@
 /**
- * @Description : TODO
+ * @Description : 時間轉換
  * @ClassName : StringToTimeTest.java
  * @Copyright : Copyright (c) 2023 
  * @ModifyHistory : 
